@@ -13,6 +13,8 @@ package phone;
 //    Создать метод sendMessage с аргументами переменной длины. Данный метод принимает на вход номера телефонов,
 //    которым будет отправлено сообщение. Метод выводит на консоль номера этих телефонов.
 
+import java.util.Arrays;
+
 public class Phone {
     private String number;
     String model;
@@ -29,9 +31,7 @@ public class Phone {
     }
 
     public Phone() {
-        this.number = "number";
-        this.model = "model";
-        this.weight = 0;
+        this("number", "model", 0);
     }
 
     public void receiveCall(String name) {
@@ -47,9 +47,8 @@ public class Phone {
     }
 
     public void sendMessage(String... numbers) {
-        for (String number : numbers) {
-            System.out.println(number);
-        }
+        System.out.println("Сообщения отправлены на номера: ");
+        System.out.println(Arrays.toString(numbers));
         System.out.println();
     }
 
