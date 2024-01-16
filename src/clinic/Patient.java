@@ -1,23 +1,14 @@
 package clinic;
 
 public class Patient {
-    int treatmentPlan;
+    private String name;
 
-    public Patient(int treatmentPlan) {
-        this.treatmentPlan = treatmentPlan;
+    public Patient(String name) {
+        this.name = name;
     }
 
-    void assignDoctor() {
-        Doctor doctor;
-
-        if (treatmentPlan == 1) {
-            doctor = new Surgeon();
-        } else if (treatmentPlan == 2) {
-            doctor = new Dentist();
-        } else {
-            doctor = new Therapist();
-        }
-
-        doctor.heal();
+    public String getName() {
+        return name;
     }
+
 }

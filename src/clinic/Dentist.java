@@ -2,7 +2,7 @@ package clinic;
 
 public class Dentist extends Doctor{
     @Override
-    void heal() {
-        System.out.println("Лечение зубов");
+    public void heal(Patient patient) {
+        System.out.println("Лечение зубов. Пациент - "+ patient.getName());
     }
 }

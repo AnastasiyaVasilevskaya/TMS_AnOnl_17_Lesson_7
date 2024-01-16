@@ -2,7 +2,7 @@ package clinic;
 
 public class Surgeon extends Doctor{
     @Override
-    void heal() {
-        System.out.println("Хирургическое вмешательство");
+    public void heal(Patient patient) {
+        System.out.println("Хирургическое вмешательство. Пациент - " + patient.getName());
     }
 }

@@ -9,8 +9,6 @@ package clinic;
 //Если план лечения имеет код 2 - назначить дантиста и выполнить метод лечить.
 //Если план лечения имеет любой другой код - назначить терапевта и выполнить метод лечить.
 
-public class Doctor {
-    void heal() {
-        System.out.println("Лечение по общему плану");
-    }
+abstract class Doctor {
+    public abstract void heal(Patient patient);
 }
